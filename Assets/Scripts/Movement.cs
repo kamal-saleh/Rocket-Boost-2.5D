@@ -126,7 +126,7 @@ public class Movement : MonoBehaviour
 
         if (shouldThrust)
         {
-            rb.AddRelativeForce(Vector3.up * thrustStrength * Time.fixedDeltaTime);
+            rb.AddRelativeForce(Vector3.up * (Time.fixedDeltaTime * thrustStrength));
 
             if (!audioSource.isPlaying)          // <‑‑ start once
                 audioSource.Play();
@@ -162,7 +162,7 @@ public class Movement : MonoBehaviour
     void ApplyRotation(float rotationPerFixedUpdate)
     {
         rb.freezeRotation = true;
-        transform.Rotate(Vector3.forward * rotationPerFixedUpdate * Time.fixedDeltaTime);
+        transform.Rotate(Vector3.forward * (Time.fixedDeltaTime * rotationPerFixedUpdate));
         rb.freezeRotation = false;
     }
 }
