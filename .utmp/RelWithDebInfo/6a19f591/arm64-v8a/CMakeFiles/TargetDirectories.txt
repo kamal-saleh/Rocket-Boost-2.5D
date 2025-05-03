@@ -1,0 +1,5 @@
+C:/Users/kamal/Desktop/Projects/Rocket Boost 2.5D/.utmp/RelWithDebInfo/6a19f591/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/kamal/Desktop/Projects/Rocket Boost 2.5D/.utmp/RelWithDebInfo/6a19f591/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Users/kamal/Desktop/Projects/Rocket Boost 2.5D/.utmp/RelWithDebInfo/6a19f591/arm64-v8a/GameActivity/CMakeFiles/game.dir
+C:/Users/kamal/Desktop/Projects/Rocket Boost 2.5D/.utmp/RelWithDebInfo/6a19f591/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+C:/Users/kamal/Desktop/Projects/Rocket Boost 2.5D/.utmp/RelWithDebInfo/6a19f591/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir

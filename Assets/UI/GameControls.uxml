@@ -1,0 +1,8 @@
+<UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="UnityEngine.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" schemaLocation="UnityEngine.UIElements ../../../UIElementsSchema/UnityEngine.UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/GameControls.uss?fileID=7433441132597879392&amp;guid=75df175c069111e4db7f13ca9025fb28&amp;type=3#GameControls" />
+    <VisualElement name="game-controls" class="game-controls">
+        <Button name="thrust-button" text="Thrust" class="control-button thrust-button" />
+        <Button name="rotate-left-button" text="←" class="control-button rotate-button" style="position: absolute; left: 1630px;" />
+        <Button name="rotate-right-button" text="→" class="control-button rotate-button" />
+    </VisualElement>
+</UXML>

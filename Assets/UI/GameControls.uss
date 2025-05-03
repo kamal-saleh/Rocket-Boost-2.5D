@@ -1,0 +1,38 @@
+.game-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    font-size: 24px;
+    transition-duration: 0.2s;
+}
+
+.control-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-button:active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.thrust-button {
+    margin: 0 20px;
+}
+
+.rotate-button {
+    width: 80px;
+    height: 80px;
+} 

@@ -1,0 +1,10 @@
+# ninja log v5
+46	1674	7679684159654163	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	14421ea7ae460ec0
+54	1711	7679684160262545	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	16200f6692d22d21
+77	1734	7679684160650036	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	167aca0d8ca417b6
+36	1763	7679684161007784	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	ce7709ca9fd98c8c
+89	1792	7679684161313881	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	e568e0a0684347b4
+18	1906	7679684162490339	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	401b46d0f29093a9
+66	2066	7679684164164353	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	cffe71ca5b6ce1d1
+1	2213	7679684165589234	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	71bd15eadcabb80b
+2213	2416	7679684167834760	C:/Users/kamal/Desktop/Projects/Rocket Boost 2.5D/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6a19f591/obj/arm64-v8a/libgame.so	39202fc500c8076

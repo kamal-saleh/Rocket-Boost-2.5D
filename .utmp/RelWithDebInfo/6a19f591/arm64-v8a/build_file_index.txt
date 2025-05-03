@@ -1,0 +1,2 @@
+C:\Users\kamal\Desktop\Projects\Rocket Boost 2.5D\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Users\kamal\Desktop\Projects\Rocket Boost 2.5D\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
