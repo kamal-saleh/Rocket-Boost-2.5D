@@ -959,7 +959,7 @@ GameObject:
   - component: {fileID: 1882096810}
   - component: {fileID: 1882096809}
   m_Layer: 5
-  m_Name: GameControls
+  m_Name: GameMobileControls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -18,6 +18,9 @@ public class Movement : MonoBehaviour
     [Header("UI Toolkit")]
     [SerializeField] private UIDocument uiDocument;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip mainEngine;
+
     /* ────────── runtime refs ────────── */
     Rigidbody rb;
     AudioSource audioSource;
@@ -129,7 +132,7 @@ public class Movement : MonoBehaviour
             rb.AddRelativeForce(Vector3.up * (Time.fixedDeltaTime * thrustStrength));
 
             if (!audioSource.isPlaying)          // <‑‑ start once
-                audioSource.Play();
+                audioSource.PlayOneShot(mainEngine);
         }
         else
         {
