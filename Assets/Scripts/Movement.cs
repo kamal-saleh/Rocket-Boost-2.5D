@@ -19,17 +19,22 @@ public class Movement : MonoBehaviour
     [SerializeField] private UIDocument uiDocument;
 
     [Header("Audio")]
-    [SerializeField] private AudioClip mainEngine;
+    [SerializeField] private AudioClip mainEngineSFX;
+
+    [Header("Particles")]
+    [SerializeField] private ParticleSystem mainEngineParticles;
+    [SerializeField] private ParticleSystem leftThrusterParticles;
+    [SerializeField] private ParticleSystem rightThrusterParticles;
 
     /* ────────── runtime refs ────────── */
-    Rigidbody rb;
-    AudioSource audioSource;
+    private Rigidbody rb;
+    private AudioSource audioSource;
 
     /* ────────── state flags ────────── */
-    bool isMobile;
-    bool thrustHeld;
-    bool rotateLeftHeld;
-    bool rotateRightHeld;
+    private bool isMobile;
+    private bool thrustHeld;
+    private bool rotateLeftHeld;
+    private bool rotateRightHeld;
 
     /* ─────────────────────────────────────────────────────────────────── */
     void Awake()
@@ -132,12 +137,18 @@ public class Movement : MonoBehaviour
             rb.AddRelativeForce(Vector3.up * (Time.fixedDeltaTime * thrustStrength));
 
             if (!audioSource.isPlaying)          // <‑‑ start once
-                audioSource.PlayOneShot(mainEngine);
+            {
+                audioSource.PlayOneShot(mainEngineSFX);
+            }
+            if (!mainEngineParticles.isPlaying)  // <‑‑ play once
+            {
+                mainEngineParticles.Play();
+            }
         }
         else
         {
-            if (audioSource.isPlaying)           // <‑‑ stop once
-                audioSource.Stop();
+            audioSource.Stop();
+            mainEngineParticles.Stop();
         }
     }
 
@@ -155,10 +166,25 @@ public class Movement : MonoBehaviour
         if (rotInput < 0f) 
         {
             ApplyRotation(rotationStrength);
+            if (!leftThrusterParticles.isPlaying)
+            {
+                rightThrusterParticles.Stop();
+                leftThrusterParticles.Play();
+            }
         }
         else if (rotInput > 0f)
         {
             ApplyRotation(-rotationStrength);
+            if (!rightThrusterParticles.isPlaying)
+            {
+                leftThrusterParticles.Stop();
+                rightThrusterParticles.Play();
+            }
+        }
+        else
+        {
+            leftThrusterParticles.Stop();
+            rightThrusterParticles.Stop();
         }
     }
 
