@@ -52,8 +52,7 @@ public class CollisionHandler : MonoBehaviour
 
     void StartCrashSequence()
     {
-        isControlable = false;
-        audioSource.Stop();
+        DisableControlAndAudio();
         audioSource.PlayOneShot(crashSFX);
         crashParticles.Play();
         DisableMovement();
@@ -62,12 +61,17 @@ public class CollisionHandler : MonoBehaviour
 
     void StartSuccessSequence()
     {
-        isControlable = false;
-        audioSource.Stop();
+        DisableControlAndAudio();
         audioSource.PlayOneShot(successSFX);
         successParticles.Play();
         DisableMovement();
         Invoke(nameof(LoadNextLevel), levelLoadDelay);
+    }
+
+    void DisableControlAndAudio()
+    {
+        isControlable = false;
+        audioSource.Stop();
     }
 
     void DisableMovement()

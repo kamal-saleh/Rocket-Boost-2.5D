@@ -47,7 +47,7 @@ public class Movement : MonoBehaviour
     {
         thrust.Enable();
         rotation.Enable();
-        
+
         isMobile = Application.isMobilePlatform;
         SetupUIButtons();
     }
@@ -134,22 +134,32 @@ public class Movement : MonoBehaviour
 
         if (shouldThrust)
         {
-            rb.AddRelativeForce(Vector3.up * (Time.fixedDeltaTime * thrustStrength));
-
-            if (!audioSource.isPlaying)          // <‑‑ start once
-            {
-                audioSource.PlayOneShot(mainEngineSFX);
-            }
-            if (!mainEngineParticles.isPlaying)  // <‑‑ play once
-            {
-                mainEngineParticles.Play();
-            }
+            StartThrusting();
         }
         else
         {
-            audioSource.Stop();
-            mainEngineParticles.Stop();
+            StopThrusting();
         }
+    }
+
+    void StartThrusting()
+    {
+        rb.AddRelativeForce(Vector3.up * (Time.fixedDeltaTime * thrustStrength));
+
+        if (!audioSource.isPlaying)          // <‑‑ start once
+        {
+            audioSource.PlayOneShot(mainEngineSFX);
+        }
+        if (!mainEngineParticles.isPlaying)  // <‑‑ play once
+        {
+            mainEngineParticles.Play();
+        }
+    }
+
+    void StopThrusting()
+    {
+        audioSource.Stop();
+        mainEngineParticles.Stop();
     }
 
     void ProcessRotation()
@@ -163,29 +173,44 @@ public class Movement : MonoBehaviour
             rotInput *= touchSensitivity;
         }
 
-        if (rotInput < 0f) 
+        if (rotInput < 0f)
         {
-            ApplyRotation(rotationStrength);
-            if (!leftThrusterParticles.isPlaying)
-            {
-                rightThrusterParticles.Stop();
-                leftThrusterParticles.Play();
-            }
+            RotateLeft();
         }
         else if (rotInput > 0f)
         {
-            ApplyRotation(-rotationStrength);
-            if (!rightThrusterParticles.isPlaying)
-            {
-                leftThrusterParticles.Stop();
-                rightThrusterParticles.Play();
-            }
+            RotateRight();
         }
         else
         {
-            leftThrusterParticles.Stop();
-            rightThrusterParticles.Stop();
+            StopRotating();
         }
+    }
+
+    void RotateLeft()
+    {
+        ApplyRotation(rotationStrength);
+        if (!leftThrusterParticles.isPlaying)
+        {
+            rightThrusterParticles.Stop();
+            leftThrusterParticles.Play();
+        }
+    }
+
+    void RotateRight()
+    {
+        ApplyRotation(-rotationStrength);
+        if (!rightThrusterParticles.isPlaying)
+        {
+            leftThrusterParticles.Stop();
+            rightThrusterParticles.Play();
+        }
+    }
+
+    void StopRotating()
+    {
+        leftThrusterParticles.Stop();
+        rightThrusterParticles.Stop();
     }
 
     void ApplyRotation(float rotationPerFixedUpdate)
