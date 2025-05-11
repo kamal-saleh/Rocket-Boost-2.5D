@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2332813203297689050, guid: e9b7fef5274713b4d818fe4c0e2627fd, type: 3}
       propertyPath: m_Name
-      value: Finish Pad Variant
+      value: Landing Pad
       objectReference: {fileID: 0}
     - target: {fileID: 2332813203297689050, guid: e9b7fef5274713b4d818fe4c0e2627fd, type: 3}
       propertyPath: m_TagString
@@ -18,15 +18,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3104107775099537248, guid: e9b7fef5274713b4d818fe4c0e2627fd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.45
+      value: 8.17
       objectReference: {fileID: 0}
     - target: {fileID: 3104107775099537248, guid: e9b7fef5274713b4d818fe4c0e2627fd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.1
+      value: 1.09
       objectReference: {fileID: 0}
     - target: {fileID: 3104107775099537248, guid: e9b7fef5274713b4d818fe4c0e2627fd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.04868126
       objectReference: {fileID: 0}
     - target: {fileID: 3104107775099537248, guid: e9b7fef5274713b4d818fe4c0e2627fd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 6b3d15c1dcf9537419a3a655ed4f5f0c, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
-    - {fileID: 1018386713325539080, guid: e9b7fef5274713b4d818fe4c0e2627fd, type: 3}
+    - {fileID: 8183257535090606987, guid: e9b7fef5274713b4d818fe4c0e2627fd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9b7fef5274713b4d818fe4c0e2627fd, type: 3}
